@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #add8e6;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+            animation: rotateIn 2s ease-in;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.2rem;
+            animation: rotateIn 2s ease-in 1s;
+            animation-fill-mode: both;
+            color: #333;
+        }
+
+        @keyframes rotateIn {
+            from {
+                opacity: 0;
+                transform: rotate(-90deg);
+            }
+            to {
+                opacity: 1;
+                transform: rotate(0deg);
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const h1 = document.querySelector('h1');
+            const p = document.querySelector('p');
+
+           h1.style.transform = 'rotate(0deg)';
+    	     p.style.transform = 'rotate(0deg)';
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Hello World</h1>
+        <p>Este é um projeto feito para o curso de Docker da DIO.</p>
+    </div>
+</body>
+</html>
